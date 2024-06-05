@@ -15,7 +15,7 @@
             color: #333;
         }
         .container {
-            width: 80%;
+            width: 90%;
             max-width: 900px;
             margin: 20px auto;
             padding: 20px;
@@ -49,13 +49,13 @@
         .speakers, .organizers {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-between;
+            justify-content: center;
         }
         .person {
             text-align: center;
             margin: 20px;
-            flex: 1 1 calc(33% - 40px);
-            max-width: calc(33% - 40px);
+            width: calc(100% - 40px);
+            max-width: 200px;
         }
         .person img {
             width: 120px;
@@ -87,6 +87,12 @@
             margin: 20px 0;
             font-size: 0.9em;
             color: #777;
+        }
+        @media (min-width: 600px) {
+            .person {
+                flex: 1 1 calc(33% - 40px);
+                max-width: calc(33% - 40px);
+            }
         }
     </style>
 </head>
