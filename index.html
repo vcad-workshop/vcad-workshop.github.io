@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ECCV 2024 2nd Workshop on Vision-Centric Autonomous Driving (VCAD)</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <title>ECCV 2024 Workshop on Vision-Centric Autonomous Driving (VCAD)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Montserrat', sans-serif;
             margin: 0;
             padding: 0;
             line-height: 1.6;
-            background-color: #f4f4f9;
+            background-color: #f0f2f5;
             color: #333;
         }
         .container {
-            width: 90%;
-            max-width: 1200px;
+            width: 80%;
+            max-width: 900px;
             margin: 20px auto;
             padding: 20px;
             background: #fff;
@@ -25,7 +25,7 @@
         }
         h1, h2, h3, h4, h5 {
             text-align: center;
-            color: #1a73e8;
+            color: #1a237e;
         }
         .intro, .dates, .keynotes, .organizers, .contact {
             margin: 20px 0;
@@ -43,25 +43,26 @@
             content: '•';
             position: absolute;
             left: 0;
-            color: #1a73e8;
+            color: #1a237e;
             font-weight: bold;
         }
         .speakers, .organizers {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-around;
+            justify-content: space-between;
         }
         .person {
             text-align: center;
             margin: 20px;
-            width: 200px;
+            flex: 1 1 calc(33% - 40px);
+            max-width: calc(33% - 40px);
         }
         .person img {
-            width: 150px;
-            height: 150px;
+            width: 120px;
+            height: 120px;
             border-radius: 50%;
             object-fit: cover;
-            border: 3px solid #1a73e8;
+            border: 3px solid #1a237e;
         }
         .person p {
             margin: 10px 0 0 0;
@@ -72,10 +73,10 @@
             font-weight: bold;
         }
         .person a:hover {
-            color: #1a73e8;
+            color: #1a237e;
         }
         .contact a {
-            color: #1a73e8;
+            color: #1a237e;
             text-decoration: none;
         }
         .contact a:hover {
@@ -154,6 +155,12 @@
                         <p>Jose M. Alvarez<br>NVIDIA</p>
                     </a>
                 </div>
+                <div class="person">
+                    <a href="https://www.xinshuoweng.com">
+                        <img src="/assets/img/people/xinshuo.jpeg" alt="Xinshuo Weng">
+                        <p>Xinshuo Weng<br>NVIDIA Research</p>
+                    </a>
+                </div>
             </div>
         </div>
 
@@ -188,12 +195,6 @@
                     <a href="https://sites.google.com/site/boyilics/home">
                         <img src="/assets/img/people/boyi.jpeg" alt="Boyi Li">
                         <p>Boyi Li<br>NVIDIA Research & UC Berkeley</p>
-                    </a>
-                </div>
-                <div class="person">
-                    <a href="https://www.xinshuoweng.com">
-                        <img src="/assets/img/people/xinshuo.jpeg" alt="Xinshuo Weng">
-                        <p>Xinshuo Weng<br>NVIDIA Research</p>
                     </a>
                 </div>
                 <div class="person">
