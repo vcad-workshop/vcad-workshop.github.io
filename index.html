@@ -3,20 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ECCV 2024 Workshop on Vision-Centric Autonomous Driving (VCAD)</title>
+    <title>ECCV 2024 2nd Workshop on Vision-Centric Autonomous Driving (VCAD)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
             line-height: 1.6;
-            background-color: #f8f9fa;
+            background-color: #f4f4f9;
             color: #333;
         }
         .container {
             width: 90%;
             max-width: 1200px;
-            margin: 0 auto;
+            margin: 20px auto;
             padding: 20px;
             background: #fff;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -24,7 +25,7 @@
         }
         h1, h2, h3, h4, h5 {
             text-align: center;
-            color: #0056b3;
+            color: #1a73e8;
         }
         .intro, .dates, .keynotes, .organizers, .contact {
             margin: 20px 0;
@@ -35,6 +36,15 @@
         }
         .intro li, .dates li {
             margin: 10px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+        .intro li::before, .dates li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #1a73e8;
+            font-weight: bold;
         }
         .speakers, .organizers {
             display: flex;
@@ -51,7 +61,7 @@
             height: 150px;
             border-radius: 50%;
             object-fit: cover;
-            border: 2px solid #ddd;
+            border: 3px solid #1a73e8;
         }
         .person p {
             margin: 10px 0 0 0;
@@ -59,12 +69,17 @@
         .person a {
             text-decoration: none;
             color: #333;
+            font-weight: bold;
         }
         .person a:hover {
-            text-decoration: underline;
+            color: #1a73e8;
         }
         .contact a {
-            color: #0066cc;
+            color: #1a73e8;
+            text-decoration: none;
+        }
+        .contact a:hover {
+            text-decoration: underline;
         }
         footer {
             text-align: center;
