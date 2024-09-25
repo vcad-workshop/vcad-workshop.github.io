@@ -63,6 +63,10 @@
             border-radius: 50%;
             object-fit: cover;
             border: 3px solid #1a237e;
+            transition: transform 0.3s ease;
+        }
+        .person img:hover {
+            transform: scale(1.1);
         }
         .person p {
             margin: 10px 0 0 0;
@@ -88,19 +92,55 @@
             font-size: 0.9em;
             color: #777;
         }
+        nav {
+            background-color: #1a237e;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .submission-button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #1a237e;
+            color: #fff;
+            text-align: center;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .submission-button:hover {
+            background-color: #303f9f;
+        }
         @media (min-width: 600px) {
             .person {
-                flex: 1 1 calc(33% - 40px);
-                max-width: calc(33% - 40px);
+                flex: 1 1 calc(25% - 40px);
+                max-width: calc(25% - 40px);
             }
         }
     </style>
 </head>
 <body>
+    <nav>
+        <a href="#intro">Introduction</a>
+        <a href="#dates">Key Dates</a>
+        <a href="#keynotes">Keynote Speakers</a>
+        <a href="#organizers">Organizers</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
     <div class="container">
         <h1>ECCV 2024 2nd Workshop on Vision-Centric Autonomous Driving (VCAD)</h1>
         
-        <div class="intro">
+        <div class="intro" id="intro">
             <h2>Introduction</h2>
             <p>
                 With the commercialization of autonomous driving and assisted driving systems, the demand for high-performance, efficient, and scalable machine learning solutions is becoming more urgent than ever before. Visual perception is a key research area of self-driving that is always attracting a lot of attention since (1) visual data provides much richer information than other sensors; (2) cameras are affordable and pervasive on vehicles as well as other robotic systems; (3) visual foundation models are trending directions in machine learning. This workshop embraces topics around vision-centric and data-driven autonomous driving, including but not limited to the following topics:
@@ -120,7 +160,7 @@
             </ul>
         </div>
 
-        <div class="dates">
+        <div class="dates" id="dates">
             <h2>Key Dates</h2>
             <p>
             After the successful holding of <a href="https://vcad.site/#/">CVPR 2023 1st VCAD Workshop</a>, ECCV 2024 2nd VCAD Workshop will take place on <strong>Sept 30, 2024</strong> from <strong>8:00am</strong> to <strong>1:00pm</strong> at <a href="https://www.micomilano.it/en">MiCo Milano</a>.
@@ -130,30 +170,12 @@
                 <li>Acceptance notification: <strong>Sept 9, 2024</strong></li>
                 <li>Camera ready for accepted submissions: <strong>Sept 15, 2024</strong></li>
             </ul>
-            <p>Please submit your draft to <a href="mailto:vision-centric-autonomous-driving@outlook.com">vision-centric-autonomous-driving@outlook.com</a>. Submissions must follow the ECCV 2024 template and will be peer-reviewed in a single-blind manner. Submission must be no more than 14 pages (excluding references). Accepted papers will be presented in the form of posters, with several papers being selected for oral presentations. </p>
+            <p>Please submit your draft to <a href="mailto:vision-centric-autonomous-driving@outlook.com" class="submission-button">Submit Your Paper</a>. Submissions must follow the ECCV 2024 template and will be peer-reviewed in a single-blind manner. Submission must be no more than 14 pages (excluding references). Accepted papers will be presented in the form of posters, with several papers being selected for oral presentations. </p>
         </div>
 
-        <div class="keynotes">
+        <div class="keynotes" id="keynotes">
             <h2>Keynote Speakers</h2>
             <div class="speakers">
-                <div class="person">
-                    <a href="https://urtasun.cs.utoronto.ca/">
-                        <img src="assets/img/people/raquel.jpeg" alt="Raquel Urtasun">
-                        <p>Raquel Urtasun<br>Waabi & University of Toronto</p>
-                    </a>
-                </div>
-                <div class="person">
-                    <a href="https://www.linkedin.com/in/vasiliki-vassia-s-b0767676/">
-                        <img src="assets/img/people/vassia.jpeg" alt="Vassia Simaiaki">
-                        <p>Vassia Simaiaki<br>Wayve</p>
-                    </a>
-                </div>
-                <div class="person">
-                    <a href="https://liaoyiyi.github.io/">
-                        <img src="assets/img/people/yiyi.jpeg" alt="Yiyi Liao">
-                        <p>Yiyi Liao<br>Zhejiang University</p>
-                    </a>
-                </div>
                 <div class="person">
                     <a href="https://research.nvidia.com/person/jose-m-alvarez">
                         <img src="assets/img/people/jose.jpeg" alt="Jose M. Alvarez">
@@ -161,15 +183,28 @@
                     </a>
                 </div>
                 <div class="person">
-                    <a href="https://www.xinshuoweng.com">
-                        <img src="assets/img/people/xinshuo.jpeg" alt="Xinshuo Weng">
-                        <p>Xinshuo Weng<br>NVIDIA Research</p>
+                    <a href="https://urtasun.cs.utoronto.ca/">
+                        <img src="assets/img/people/raquel.jpeg" alt="Raquel Urtasun">
+                        <p>Raquel Urtasun<br>Waabi & University of Toronto</p>
                     </a>
                 </div>
+                <div class="person">
+                    <a href="https://liaoyiyi.github.io/">
+                        <img src="assets/img/people/boyi.jpeg" alt="Boyi Li">
+                        <p>Boyi Li<br>UC Berkeley</p>
+                    </a>
+                </div>
+                <div class="person">
+                    <a href="https://www.linkedin.com/in/vasiliki-vassia-s-b0767676/">
+                        <img src="assets/img/people/vassia.jpeg" alt="Vassia Simaiaki">
+                        <p>Vassia Simaiaki<br>Wayve</p>
+                    </a>
+                </div>   
+                
             </div>
         </div>
 
-        <div class="organizers">
+        <div class="organizers" id="organizers">
             <h2>Organizers</h2>
             <div class="speakers">
                 <div class="person">
@@ -198,8 +233,8 @@
                 </div>
                 <div class="person">
                     <a href="https://sites.google.com/site/boyilics/home">
-                        <img src="assets/img/people/boyi.jpeg" alt="Boyi Li">
-                        <p>Boyi Li<br>NVIDIA Research & UC Berkeley</p>
+                        <img src="assets/img/people/yiyi.jpeg" alt="Yiyi Liao">
+                        <p>Boyi Li<br>Zhejiang University</p>
                     </a>
                 </div>
                 <div class="person">
@@ -211,7 +246,7 @@
             </div>
         </div>
 
-        <div class="contact">
+        <div class="contact" id="contact">
             <h2>Contact</h2>
             <p>For any questions, please contact us at <a href="mailto:yimingli@nyu.edu">yimingli@nyu.edu</a>.</p>
         </div>
